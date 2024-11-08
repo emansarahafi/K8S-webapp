@@ -1,0 +1,8 @@
+CREATE DATABASE taskmanager;
+USE taskmanager;
+
+CREATE TABLE tasks (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    description TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
