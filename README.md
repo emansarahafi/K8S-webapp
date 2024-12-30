@@ -2,137 +2,6 @@
 
 This project demonstrates a 3-layer application architecture deployed on Kubernetes using Helm. The application consists of a frontend, backend, and a MySQL database.
 
-## Project Structure
-
-```sh
-3-layer-app/
-    .helmignore
-    
-
-Chart.yaml
-
-
-    charts/
-    templates/
-        
-
-backend-deployment.yaml
-
-
-        
-
-backend-service.yaml
-
-
-        
-
-frontend-configmap.yaml
-
-
-        
-
-frontend-deployment.yaml
-
-
-        
-
-frontend-service.yaml
-
-
-        
-
-mysql-deployment.yaml
-
-
-        
-
-mysql-secret.yaml
-
-
-        
-
-mysql-service.yaml
-
-
-    
-
-values.yaml
-
-
-
-
-README.md
-
-
-webapp/
-    backend/
-        
-
-backend-deployment.yaml
-
-
-        
-
-backend-service.yaml
-
-
-        Dockerfile
-        
-
-package.json
-
-
-        
-
-server.js
-
-
-    db/
-        
-
-db.sql
-
-
-        Dockerfile
-        
-
-mysql-deployment.yaml
-
-
-        
-
-mysql-secret.yaml
-
-
-        
-
-mysql-service.yaml
-
-
-    frontend/
-        
-
-index.html
-
-
-        
-
-frontend-deployment.yaml
-
-
-        
-
-frontend-service.yaml
-
-
-        
-
-frontend-configmap.yaml
-
-
-        Dockerfile
-```
-
 ## Components
 
 ### Frontend
@@ -193,7 +62,7 @@ The Helm chart is located in the `3-layer-app` directory and includes templates 
 1. **Clone the repository**:
 
     ```sh
-    git clone <repository-url>
+    git clone https://github.com/emansarahafi/K8S-webapp.git
     cd 3-layer-app
     ```
 
@@ -220,5 +89,5 @@ The Helm chart is located in the `3-layer-app` directory and includes templates 
 To delete the deployment, run:
 
 ```sh
-helm uninstall my-3-layer-app
+helm uninstall 3-layer-app
 ```
