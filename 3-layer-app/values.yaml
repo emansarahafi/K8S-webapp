@@ -1,0 +1,33 @@
+db:
+  app: mysql
+  name: db
+  replicas: 1
+  image:
+    repository: emansarahafi/lab2-db
+    tag: latest
+  port: 3306
+  
+
+backend:
+  app: backend
+  name: back-server
+  replicas: 2
+  image:
+    repository: emansarahafi/lab2-backend
+    tag: latest
+  service:
+    type: ClusterIP
+    port: 3000
+    nodePort: 30002
+
+frontend:
+  app: frontend
+  name: front-c
+  replicas: 2
+  image:
+    repository: emansarahafi/lab2-frontend
+    tag: latest
+  service:
+    type: NodePort
+    port: 80
+    nodePort: 30080
